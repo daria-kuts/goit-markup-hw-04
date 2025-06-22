@@ -33,6 +33,7 @@ img{
     align-items: center;
     justify-content: space-between;
     padding: 0 15px 0 15px; 
+    width: 1158px;
 
 }
 .header{
@@ -60,6 +61,7 @@ color: #4d5ae5;
     margin: 0;
    flex-direction:row;
 padding: 24px 0;
+
 }
 
 .header-nav {
@@ -73,11 +75,29 @@ align-items: center;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    position: relative;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 .navigation .nav-link:hover, .navigation .nav-link:active, .navigation .nav-link:focus
 {
     color: #404bbf;
 }
+.nav-link:active::after{
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
+    content: "";
+    transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 
 .contacts-list{
     font-style: normal;
@@ -92,6 +112,9 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #434455;
+transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts .contacts-link:hover, .contacts .contacts-link:focus {
     color: #404bbf;
@@ -104,13 +127,21 @@ color: #434455;
 .hero-banner{
     background-color: #2e2f42;
     padding: 188px 0;
-
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+        ), url(/images/hero-banner.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .hero-section{
     display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 .hero-banner-title{
 font-weight: 700;
@@ -121,6 +152,7 @@ text-align: center;
 color: #fff; 
 max-width: 496px;
 margin-bottom: 48px;
+
 }
 
 .hero-banner-button{
@@ -136,12 +168,20 @@ margin-bottom: 48px;
     border: 0;
 border-radius: 4px;
 min-width: 169px;
+transition-property: color;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .hero-banner-button:hover, .hero-banner-button:focus{
     background: #404bbf;
+    border: 1px solid #000;
+     border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 .benefits{
     display: flex;
+
 }
 
 .visually-hidden {
@@ -183,7 +223,6 @@ letter-spacing: 0.02em;
 
 .section-team{
     background-color: #f4f4fd;
-
 }
 
 .team-title{
@@ -206,6 +245,7 @@ margin-bottom: 72px;
     background-color: #FFFFFF;
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   
 
 }
