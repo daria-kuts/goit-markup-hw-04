@@ -415,6 +415,7 @@ border: none;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
     width: 100%;
     height: 100%;
+    
     }
     
    
@@ -431,7 +432,7 @@ border: none;
 {
     background-color: #404bbf;
 }
-.social-media-list-icon:focus {
+.social-media-list-item .social-media-list-icon:focus {
     background-color: #404bbf;
 }
 
@@ -479,7 +480,7 @@ margin-left: 60px;
 .social-link-footer:hover{
     background-color: #31D0AA;
 }
-.social-link-footer:focus{
+.footer-media-list-item .social-link-footer:focus{
     background-color: #31D0AA;
 }
 .image-wrapper{
