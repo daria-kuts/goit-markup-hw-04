@@ -38,6 +38,9 @@ img{
 }
 .header{
    border-bottom: 1px solid #E7E9FC; 
+   box-shadow:0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .logo{
    margin-right: 76px;
@@ -68,6 +71,9 @@ padding: 24px 0;
 display: flex;
 align-items: center;
 }
+.navigation li:first-child .nav-link{
+color: #404BBF;
+}
 
 .navigation .nav-link{
     font-weight: 500;
@@ -87,7 +93,7 @@ align-items: center;
 }
 .nav-link.active::after{
     position: absolute;
-    bottom: -20px;
+    bottom: -1px;
     left: 0;
     width: 48px;
     height: 4px;
@@ -126,7 +132,9 @@ transition-property: color;
 
 .hero-banner{
     background-color: #2e2f42;
+    max-width: 1440px;
     padding: 188px 0;
+    background-position: center;
     background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
@@ -138,7 +146,7 @@ box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .hero-section{
-    display: flex;
+display: flex;
   flex-direction: column;
   align-items: center;
 
@@ -168,9 +176,7 @@ margin-bottom: 48px;
     border: 0;
 border-radius: 4px;
 min-width: 169px;
-transition-property: color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .hero-banner-button:hover, .hero-banner-button:focus{
@@ -253,8 +259,7 @@ margin-bottom: 72px;
     width: 100%;
 }
 .team-member-container{
-    padding-top: 32px;
-    padding-bottom: 0;
+    padding: 32px 0;
    
 
 }
@@ -296,8 +301,7 @@ margin-bottom: 8px;
 }
 .products-list-item{
     width: calc((100% - 48px) / 3);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); 
     cursor: pointer;
 
     
@@ -327,6 +331,7 @@ margin-bottom: 8px;
         line-height: 1.5;
         letter-spacing: 0.02em;
 }
+
 .footer{
 background-color: #2e2f42;
 padding: 100px 0;
@@ -357,9 +362,15 @@ color: #f4f4fd;
 
 }
 .footer-container{
+    display: flex;
+    align-items: baseline;
     margin-right: 60px;
     margin-left: 141px;
 }
+.logo-footer-container{
+    margin-right: 120px
+}
+
 .svg-sprite{
     position: absolute;
     width: 0;
@@ -369,8 +380,8 @@ color: #f4f4fd;
 .icon{
     fill: none;
 }
-.icon-benefit{
-width: 60px;
+.container-icon-benefit svg{
+width: 64px;
 height: 64px;
 
 }
@@ -378,21 +389,25 @@ height: 64px;
 border: 1px solid #8E8F99;
 border-radius: 4px;
 width: 264px;
+height: 112px;
 background: #F4F4FD;
 display: flex;
 justify-content: center;
-align-content: center;
+align-items: center;
 padding: 24px 100px;
 margin-bottom: 8px;
 }
 .team-social-media{
     width: 16px;
     height: 16px;
+    fill: #f4f4fd;
 }
 .social-media-list-item{
     width: 40px;
     height: 40px;
-    border: none;
+}
+    .social-media-list-icon{
+border: none;
     border-radius: 50%;
     background-color: #4D5AE5;
     display: flex;
@@ -401,89 +416,99 @@ margin-bottom: 8px;
     padding: 12px;
     transition-property: background-color;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+    width: 100%;
+    height: 100%;
+    }
+    
+   
 .social-media-list{
     display: flex;
     justify-content: center;
     gap: 24px;
     width: 232px;
-    margin-left: 16px;
-    margin-right: 16px;
     margin-top: 8px;
-    margin-bottom: 32px;
+    margin-right: 16px;
+    margin-left: 16px;
 }
-.team-member-photo:hover .social-media-list-item{
-    background-color: #404BBF;
+.social-media-list-icon:hover,
+.social-media-list-icon:focus
+{
+    background-color: #404bbf;
 }
+
 .social-media-list-footer{
     gap: 16px;
     margin: 0;
     display: flex;
-    justify-content: flex-start;
     width: 208px;
+
 }
 .footer-social-media{
 width: 24px;
 height: 24px;
+fill: #f4f4fd;
 }
 .footer-media-list-item{
     width: 40px;
     height: 40px;
-    border: none;
-    border-radius: 50%;
-    background-color: #4D5AE5;
-    padding: 8px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.social-link-footer{
+width: 100%;
+height: 100%;
+ background-color: #4D5AE5;
+  display: flex; 
+  border-radius: 50%;
+ justify-content: center;
+align-content: center;
+padding: 8px;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .social-media-footer-title{
 font-weight: 500;
 font-size: 16px;
 line-height: 150%;
 letter-spacing: 0.02em;
-color: #fff;
-padding-bottom: 16px;
+color: #FFFFFF;
+margin-bottom: 16px;
 }
 .social-media-footer{
-width: 208px;
+
 margin-left: 60px;
+
 }
-.footer-media-list-item:hover{
+.social-link-footer:hover{
     background-color: #31D0AA;
 }
 .image-wrapper{
     position: relative;
     overflow: hidden;
 }
-.overlay{
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.02em;
-    color:#F4F4FD;
-    background-color: #4D5AE5;
-    padding-top: 40px;
-    padding-left: 32px;
-    padding-right: 32px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.products-list-item:hover .overlay{
-    transform: translateY(0);
+
+.products-list-item:hover .overlay-text{
+    transform: translateY(0%);
 }
 .products-list-item:hover{
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
 0 1px 1px 0 rgba(46, 47, 66, 0.16),
 0 1px 6px 0 rgba(46, 47, 66, 0.08);  
 }
+.overlay-text{
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color:#F4F4FD;
+    background-color: #4D5AE5;
+    padding: 40px 32px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
