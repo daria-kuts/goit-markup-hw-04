@@ -380,11 +380,8 @@ color: #f4f4fd;
 .icon{
     fill: none;
 }
-.container-icon-benefit svg{
-width: 64px;
-height: 64px;
 
-}
+
 .container-icon-benefit{
 border: 1px solid #8E8F99;
 border-radius: 4px;
@@ -398,8 +395,6 @@ padding: 24px 100px;
 margin-bottom: 8px;
 }
 .team-social-media{
-    width: 16px;
-    height: 16px;
     fill: #f4f4fd;
 }
 .social-media-list-item{
@@ -413,7 +408,7 @@ border: none;
     background-color: #4D5AE5;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     padding: 12px;
     transition-property: background-color;
     transition-duration: 250ms;
@@ -448,8 +443,7 @@ border: none;
 
 }
 .footer-social-media{
-width: 24px;
-height: 24px;
+
 fill: #f4f4fd;
 }
 .footer-media-list-item{
@@ -465,8 +459,7 @@ height: 100%;
   display: flex; 
   border-radius: 50%;
  justify-content: center;
-align-content: center;
-padding: 8px;
+align-items: center;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
