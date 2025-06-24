@@ -405,6 +405,7 @@ margin-bottom: 8px;
 .social-media-list-item{
     width: 40px;
     height: 40px;
+    align-content: center;
 }
     .social-media-list-icon{
 border: none;
@@ -431,9 +432,11 @@ border: none;
     margin-right: 16px;
     margin-left: 16px;
 }
-.social-media-list-icon:hover,
-.social-media-list-icon:focus
+.social-media-list-icon:hover
 {
+    background-color: #404bbf;
+}
+.social-media-list-icon:focus {
     background-color: #404bbf;
 }
 
@@ -481,6 +484,9 @@ margin-left: 60px;
 
 }
 .social-link-footer:hover{
+    background-color: #31D0AA;
+}
+.social-link-footer:focus{
     background-color: #31D0AA;
 }
 .image-wrapper{
